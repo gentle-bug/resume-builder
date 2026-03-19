@@ -1,0 +1,130 @@
+{
+  "title": "Nguyen Van A - Senior Java Developer",
+  "templateName": "cabernet",
+  "data": {
+    "basics": {
+      "name": "Nguyen Van A",
+      "label": "Senior Java Developer",
+      "email": "nguyenvana.dev@gmail.com",
+      "phone": "+84 901 234 567",
+      "summary": "8+ years of experience in Java/Spring Boot ecosystem. Specialized in building scalable microservices, RESTful APIs, and cloud-native applications. Led a team of 6 developers to deliver enterprise solutions for banking and e-commerce domains. Passionate about clean code, system design, and mentoring junior developers.",
+      "location": "Ho Chi Minh City, Vietnam"
+    },
+    "work": [
+      {
+        "company": "VNG Corporation",
+        "position": "Senior Java Developer / Tech Lead",
+        "startDate": "2021-03",
+        "endDate": "Present",
+        "summary": "Lead a team of 6 developers building payment gateway serving 2M+ daily transactions.",
+        "highlights": [
+          "Designed and implemented microservices architecture handling 50,000 requests/second",
+          "Reduced API response time by 40% through Redis caching and query optimization",
+          "Migrated monolithic application to Spring Boot microservices with zero downtime",
+          "Implemented CI/CD pipeline using Jenkins, Docker, and Kubernetes",
+          "Mentored 4 junior developers, 2 promoted to mid-level within 1 year"
+        ]
+      },
+      {
+        "company": "FPT Software",
+        "position": "Java Developer",
+        "startDate": "2018-06",
+        "endDate": "2021-02",
+        "summary": "Developed enterprise banking solutions for international clients (Japan, Korea).",
+        "highlights": [
+          "Built core banking REST APIs serving 500+ bank branches nationwide",
+          "Integrated third-party payment systems (VNPAY, Momo, ZaloPay)",
+          "Implemented OAuth2 + JWT authentication for multi-tenant SaaS platform",
+          "Wrote 300+ unit/integration tests achieving 85% code coverage",
+          "Received 'Best Developer of the Year' award in 2020"
+        ]
+      },
+      {
+        "company": "KMS Technology",
+        "position": "Junior Java Developer",
+        "startDate": "2016-09",
+        "endDate": "2018-05",
+        "summary": "Developed web applications for US-based healthcare clients.",
+        "highlights": [
+          "Built RESTful APIs using Spring Boot and Hibernate",
+          "Developed front-end components with Angular and TypeScript",
+          "Participated in Agile/Scrum with 2-week sprint cycles",
+          "Maintained and optimized PostgreSQL database with 10M+ records"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Ho Chi Minh City University of Science (HCMUS)",
+        "area": "Computer Science",
+        "studyType": "Bachelor of Science",
+        "startDate": "2012",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java / Spring Boot",
+        "level": "Expert",
+        "keywords": ["Spring Boot", "Spring Security", "Spring Data JPA", "Spring Cloud", "Hibernate"]
+      },
+      {
+        "name": "Databases",
+        "level": "Advanced",
+        "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Elasticsearch"]
+      },
+      {
+        "name": "Cloud & DevOps",
+        "level": "Advanced",
+        "keywords": ["AWS (EC2, S3, RDS, Lambda)", "Docker", "Kubernetes", "Jenkins", "GitLab CI/CD"]
+      },
+      {
+        "name": "Architecture",
+        "level": "Advanced",
+        "keywords": ["Microservices", "REST API", "Message Queue (Kafka, RabbitMQ)", "System Design"]
+      },
+      {
+        "name": "Frontend",
+        "level": "Intermediate",
+        "keywords": ["React", "TypeScript", "Angular", "HTML/CSS"]
+      },
+      {
+        "name": "Tools & Others",
+        "level": "Advanced",
+        "keywords": ["Git", "Jira", "Confluence", "IntelliJ IDEA", "Postman", "Linux"]
+      }
+    ],
+    "projects": [
+      {
+        "name": "ZPay - Payment Gateway Platform",
+        "description": "High-performance payment processing platform handling 2M+ daily transactions across multiple payment channels (credit card, e-wallet, bank transfer). Built with Spring Boot microservices, Kafka event streaming, and deployed on AWS EKS.",
+        "url": "https://github.com/nguyenvana/zpay",
+        "highlights": [
+          "Spring Boot, Kafka, Redis, PostgreSQL, AWS EKS",
+          "50,000 req/s throughput with 99.99% uptime",
+          "PCI-DSS compliant architecture"
+        ]
+      },
+      {
+        "name": "SmartHR - Employee Management System",
+        "description": "Full-featured HR management SaaS platform for 200+ companies. Includes payroll, attendance, leave management, and performance review modules.",
+        "url": "https://github.com/nguyenvana/smarthr",
+        "highlights": [
+          "Spring Boot, React, PostgreSQL, Docker",
+          "Multi-tenant architecture serving 200+ companies",
+          "Automated payroll calculation for 50,000+ employees"
+        ]
+      },
+      {
+        "name": "CV Builder Pro (This App)",
+        "description": "Open-source resume builder with 23 professional templates, PDF export, and JSON import/export. Built as a personal project to help developers create beautiful CVs.",
+        "url": "https://github.com/nguyenvana/cv-builder-pro",
+        "highlights": [
+          "Spring Boot 3.4, React 18, PostgreSQL, Flying Saucer PDF",
+          "23 responsive templates with live preview",
+          "Export PDF, JSON import/export functionality"
+        ]
+      }
+    ]
+  }
+}

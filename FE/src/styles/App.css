@@ -1,0 +1,600 @@
+/* =============================================
+   CV Builder Pro - Global Styles
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* =============================================
+   Auth Pages (Login / Register)
+   ============================================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+
+.auth-card .ant-card-body {
+  padding: 32px;
+}
+
+/* =============================================
+   Dashboard
+   ============================================= */
+
+.dashboard-layout {
+  min-height: 100vh;
+  background: #e2e7ef;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: #001529;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dashboard-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-content {
+  padding: 40px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.resume-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: #1677ff44;
+}
+
+.resume-card .ant-card-body {
+  padding: 20px 24px;
+  background: #ffffff;
+}
+
+.resume-card .ant-card-meta-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px !important;
+}
+
+.resume-card .ant-card-meta-description {
+  margin-top: 4px;
+}
+
+.resume-card .ant-card-actions {
+  border-top: 1px solid #e0e7ef;
+  display: flex !important;
+  background: #ffffff;
+}
+
+.resume-card .ant-card-actions > li {
+  margin: 0 !important;
+  flex: 1 !important;
+  width: auto !important;
+  text-align: center;
+  padding: 0 !important;
+  transition: background 0.2s ease;
+}
+
+.resume-card .ant-card-actions > li:hover {
+  background: #e6f4ff;
+}
+
+.resume-card .ant-card-actions > li .ant-btn {
+  font-size: 13px;
+  color: #3b5998;
+  width: 100%;
+  height: 44px;
+  border-radius: 0;
+}
+
+.center-spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  flex-direction: column;
+}
+
+/* =============================================
+   Editor
+   ============================================= */
+
+.editor-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #001529;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.editor-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.editor-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.editor-header .title-input {
+  background: transparent;
+}
+
+.editor-header .title-input:hover,
+.editor-header .title-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.editor-body {
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-sider {
+  overflow-y: auto;
+  border-right: 1px solid #e8e8e8;
+  background: #fff !important;
+}
+
+.editor-sider .ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-form-container {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.editor-form-container .ant-collapse-header {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.editor-form-container .ant-collapse-content-box {
+  padding: 16px 8px !important;
+}
+
+.editor-form-container .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.editor-form-container .ant-form-item-label > label {
+  font-size: 13px;
+  color: #595959;
+}
+
+.editor-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.dynamic-entry {
+  margin-bottom: 8px;
+}
+
+.dynamic-entry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* Preview Panel */
+
+.preview-panel {
+  background: #e8e8e8;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  align-items: flex-start;
+}
+
+.preview-container {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.preview-container.public {
+  margin: 32px auto;
+}
+
+/* =============================================
+   Public Preview
+   ============================================= */
+
+.public-preview-layout {
+  min-height: 100vh;
+}
+
+.public-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: #001529;
+  height: 64px;
+}
+
+.public-preview-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.public-preview-header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.public-preview-content {
+  background: #e8e8e8;
+  min-height: calc(100vh - 64px);
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =============================================
+   Resume Preview - Modern Template
+   ============================================= */
+
+.resume-preview {
+  padding: 40px 48px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  color: #1a1a1a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #1677ff;
+}
+
+.resume-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+  letter-spacing: -0.5px;
+}
+
+.resume-label {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+
+.resume-contact {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 13px;
+}
+
+.resume-contact span {
+  position: relative;
+}
+
+.resume-contact span:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -12px;
+  color: #ccc;
+}
+
+/* Sections */
+.resume-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1677ff;
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.resume-summary {
+  color: #444;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Entries (Work, Education, Projects) */
+.resume-entry {
+  margin-bottom: 16px;
+}
+
+.resume-entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.entry-title-group {
+  flex: 1;
+}
+
+.entry-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.entry-subtitle {
+  font-size: 13px;
+  color: #555;
+}
+
+.entry-date {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+  margin-left: 16px;
+  padding-top: 2px;
+}
+
+.entry-description {
+  color: #444;
+  font-size: 13px;
+  margin: 4px 0;
+  line-height: 1.6;
+}
+
+.entry-link {
+  font-size: 12px;
+  color: #1677ff;
+  text-decoration: none;
+}
+
+.entry-link:hover {
+  text-decoration: underline;
+}
+
+.entry-highlights {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  color: #444;
+  font-size: 13px;
+}
+
+.entry-highlights li {
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill-item {
+  flex: 0 0 calc(50% - 8px);
+  font-size: 13px;
+}
+
+.skill-item strong {
+  color: #1a1a1a;
+}
+
+.skill-level {
+  color: #888;
+  font-size: 12px;
+}
+
+.skill-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.skill-keyword {
+  display: inline-block;
+  background: #f0f5ff;
+  color: #1677ff;
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  border: 1px solid #d6e4ff;
+}
+
+/* =============================================
+   Template Variants
+   ============================================= */
+
+/* Classic Template */
+.template-classic .resume-header {
+  text-align: left;
+  border-bottom: 3px double #333;
+}
+
+.template-classic .resume-name {
+  font-size: 32px;
+  color: #333;
+}
+
+.template-classic .section-title {
+  color: #333;
+  border-bottom: 2px solid #333;
+  letter-spacing: 2px;
+}
+
+.template-classic .skill-keyword {
+  background: #f5f5f5;
+  color: #333;
+  border-color: #d9d9d9;
+}
+
+/* Minimal Template */
+.template-minimal .resume-header {
+  border-bottom: 1px solid #eee;
+}
+
+.template-minimal .resume-name {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.template-minimal .section-title {
+  color: #999;
+  font-weight: 600;
+  font-size: 12px;
+  border-bottom: none;
+  margin-bottom: 8px;
+}
+
+.template-minimal .skill-keyword {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #666;
+}
+
+.template-minimal .resume-contact span:not(:last-child)::after {
+  content: '/';
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 16px;
+  }
+
+  .dashboard-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .preview-panel {
+    padding: 16px;
+  }
+
+  .preview-container {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .resume-preview {
+    padding: 24px;
+  }
+
+  .skill-item {
+    flex: 0 0 100%;
+  }
+
+  .entry-header {
+    flex-direction: column;
+  }
+
+  .entry-date {
+    margin-left: 0;
+    margin-top: 2px;
+  }
+}
