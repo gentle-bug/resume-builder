@@ -34,6 +34,8 @@ import type {
   Education,
   Skill,
   Project,
+  Certification,
+  Language,
 } from '../services/resumeService'
 import ResumePreview from '../components/ResumePreview'
 
@@ -69,6 +71,11 @@ const TEMPLATE_DEFAULTS: Record<string, { color: string; font: string }> = {
   'armagnac':       { color: '#4338CA', font: "'Inter', sans-serif" },           // Dashboard — indigo
   'amarone':        { color: '#881337', font: "'Lato', sans-serif" },            // Zigzag — dark burgundy
   'opus-one':       { color: '#1E293B', font: "'Raleway', sans-serif" },         // Watermark — dark slate
+  'romanee':        { color: '#0F172A', font: "'Inter', sans-serif" },
+  'cristal':        { color: '#78716C', font: "'Lato', sans-serif" },
+  'sassicaia':      { color: '#1D4ED8', font: "'Inter', sans-serif" },
+  'krug':           { color: '#7C3AED', font: "'DM Sans', sans-serif" },
+  'petrus':         { color: '#991B1B', font: "'Lora', serif" },
 }
 
 const getDefaults = (t: string) => TEMPLATE_DEFAULTS[t] || { color: '#2563EB', font: "'Segoe UI', system-ui, sans-serif" }
@@ -115,6 +122,8 @@ const EditorPage: React.FC = () => {
             education: [],
             skills: [],
             projects: [],
+            certifications: [],
+            languages: [],
           }
         }
 
@@ -291,6 +300,15 @@ const EditorPage: React.FC = () => {
           </Form.Item>
           <Form.Item name={['basics', 'location']} label="Location">
             <Input placeholder="San Francisco, CA" />
+          </Form.Item>
+          <Form.Item name={['basics', 'linkedin']} label="LinkedIn URL">
+            <Input placeholder="https://linkedin.com/in/..." />
+          </Form.Item>
+          <Form.Item name={['basics', 'github']} label="GitHub URL">
+            <Input placeholder="https://github.com/..." />
+          </Form.Item>
+          <Form.Item name={['basics', 'website']} label="Website URL">
+            <Input placeholder="https://yoursite.com" />
           </Form.Item>
           <Form.Item name={['basics', 'summary']} label="Summary">
             <TextArea
@@ -685,6 +703,71 @@ const EditorPage: React.FC = () => {
         </Form.List>
       ),
     },
+    {
+      key: 'certifications',
+      label: 'Certifications',
+      children: (
+        <Form.List name="certifications">
+          {(fields, { add, remove }) => (
+            <div>
+              {fields.map(({ key, name, ...restField }) => (
+                <div key={key} className="dynamic-entry">
+                  <div className="dynamic-entry-header">
+                    <Text strong>Certification #{name + 1}</Text>
+                    <Button type="text" danger icon={<DeleteOutlined />} onClick={() => remove(name)} size="small">Remove</Button>
+                  </div>
+                  <Form.Item {...restField} name={[name, 'name']} label="Certification Name">
+                    <Input placeholder="AWS Solutions Architect" />
+                  </Form.Item>
+                  <Form.Item {...restField} name={[name, 'issuer']} label="Issuer">
+                    <Input placeholder="Amazon Web Services" />
+                  </Form.Item>
+                  <Form.Item {...restField} name={[name, 'date']} label="Date">
+                    <Input placeholder="2024-01" />
+                  </Form.Item>
+                  <Divider />
+                </div>
+              ))}
+              <Button type="dashed" onClick={() => add({ name: '', issuer: '', date: '' })} icon={<PlusOutlined />} block>Add Certification</Button>
+            </div>
+          )}
+        </Form.List>
+      ),
+    },
+    {
+      key: 'languages',
+      label: 'Languages',
+      children: (
+        <Form.List name="languages">
+          {(fields, { add, remove }) => (
+            <div>
+              {fields.map(({ key, name, ...restField }) => (
+                <div key={key} className="dynamic-entry">
+                  <div className="dynamic-entry-header">
+                    <Text strong>Language #{name + 1}</Text>
+                    <Button type="text" danger icon={<DeleteOutlined />} onClick={() => remove(name)} size="small">Remove</Button>
+                  </div>
+                  <Form.Item {...restField} name={[name, 'language']} label="Language">
+                    <Input placeholder="English" />
+                  </Form.Item>
+                  <Form.Item {...restField} name={[name, 'fluency']} label="Fluency">
+                    <Select placeholder="Select fluency" options={[
+                      { value: 'Native', label: 'Native' },
+                      { value: 'Fluent', label: 'Fluent' },
+                      { value: 'Advanced', label: 'Advanced' },
+                      { value: 'Intermediate', label: 'Intermediate' },
+                      { value: 'Basic', label: 'Basic' },
+                    ]} />
+                  </Form.Item>
+                  <Divider />
+                </div>
+              ))}
+              <Button type="dashed" onClick={() => add({ language: '', fluency: '' })} icon={<PlusOutlined />} block>Add Language</Button>
+            </div>
+          )}
+        </Form.List>
+      ),
+    },
   ]
 
   return (
@@ -699,7 +782,7 @@ const EditorPage: React.FC = () => {
           >
             Dashboard
           </Button>
-          <Divider orientation="vertical" style={{ borderColor: 'rgba(255,255,255,0.2)', height: 24 }} />
+          <Divider type="vertical" style={{ borderColor: 'rgba(255,255,255,0.2)', height: 24 }} />
           <Input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -737,7 +820,7 @@ const EditorPage: React.FC = () => {
               ]},
               { label: '── Tech Collection ──', options: [
                 { value: 'absinthe', label: 'Absinthe' },
-                { value: 'hennessy', label: 'Hennessy' },
+                { value: 'hennessy', label: 'Hennessy (ATS)' },
                 { value: 'tanqueray', label: 'Tanqueray' },
                 { value: 'belvedere', label: 'Belvedere' },
                 { value: 'lagavulin', label: 'Lagavulin' },
@@ -753,6 +836,11 @@ const EditorPage: React.FC = () => {
                 { value: 'armagnac', label: 'Armagnac' },
                 { value: 'amarone', label: 'Amarone' },
                 { value: 'opus-one', label: 'Opus One' },
+                { value: 'romanee', label: 'Romanee' },
+                { value: 'cristal', label: 'Cristal' },
+                { value: 'sassicaia', label: 'Sassicaia' },
+                { value: 'krug', label: 'Krug' },
+                { value: 'petrus', label: 'Petrus' },
               ]},
             ]}
           />

@@ -8,7 +8,10 @@
       "email": "nguyenvana.dev@gmail.com",
       "phone": "+84 901 234 567",
       "summary": "8+ years of experience in Java/Spring Boot ecosystem. Specialized in building scalable microservices, RESTful APIs, and cloud-native applications. Led a team of 6 developers to deliver enterprise solutions for banking and e-commerce domains. Passionate about clean code, system design, and mentoring junior developers.",
-      "location": "Ho Chi Minh City, Vietnam"
+      "location": "Ho Chi Minh City, Vietnam",
+      "linkedin": "linkedin.com/in/nguyenvana",
+      "github": "github.com/nguyenvana",
+      "website": "nguyenvana.dev"
     },
     "work": [
       {
@@ -117,13 +120,44 @@
       },
       {
         "name": "CV Builder Pro (This App)",
-        "description": "Open-source resume builder with 23 professional templates, PDF export, and JSON import/export. Built as a personal project to help developers create beautiful CVs.",
+        "description": "Open-source resume builder with 29 professional templates, PDF export, and JSON import/export. Built as a personal project to help developers create beautiful CVs.",
         "url": "https://github.com/nguyenvana/cv-builder-pro",
         "highlights": [
-          "Spring Boot 3.4, React 18, PostgreSQL, Flying Saucer PDF",
-          "23 responsive templates with live preview",
+          "Spring Boot 3.4, React 18, H2/PostgreSQL",
+          "29 responsive templates with live preview",
           "Export PDF, JSON import/export functionality"
         ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "date": "2023-05"
+      },
+      {
+        "name": "Oracle Certified Professional, Java SE 17",
+        "issuer": "Oracle",
+        "date": "2022-08"
+      },
+      {
+        "name": "Spring Professional Certification",
+        "issuer": "VMware / Broadcom",
+        "date": "2021-11"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Vietnamese",
+        "fluency": "Native"
+      },
+      {
+        "language": "English",
+        "fluency": "Fluent"
+      },
+      {
+        "language": "Japanese",
+        "fluency": "Basic"
       }
     ]
   }

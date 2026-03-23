@@ -8,7 +8,10 @@
       "email": "nguyenvana.dev@gmail.com",
       "phone": "+84 901 234 567",
       "summary": "8+ years of experience in Java/Spring Boot ecosystem. Specialized in building scalable microservices, RESTful APIs, and cloud-native applications. Led a team of 6 developers to deliver enterprise solutions for banking and e-commerce domains.",
-      "location": "Ho Chi Minh City, Vietnam"
+      "location": "Ho Chi Minh City, Vietnam",
+      "linkedin": "linkedin.com/in/nguyenvana",
+      "github": "github.com/nguyenvana",
+      "website": "nguyenvana.dev"
     },
     "work": [
       {
@@ -68,7 +71,7 @@
         "endDate": "Present",
         "summary": "Active contributor to open-source Java ecosystem projects.",
         "highlights": [
-          "Resume Builder — full-stack app with 24 templates, Spring Boot + React, 500+ GitHub stars",
+          "Resume Builder — full-stack app with 29 templates, Spring Boot + React, 500+ GitHub stars",
           "Spring Boot Starter Kit — boilerplate with JWT auth, RBAC, Swagger, used by 200+ developers",
           "Contributed bug fixes and features to Apache Kafka Java client library"
         ]
@@ -105,6 +108,28 @@
         "keywords": ["Microservices", "REST API", "Kafka", "System Design"]
       }
     ],
-    "projects": []
+    "projects": [],
+    "certifications": [
+      {
+        "name": "AWS Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "date": "2023-05"
+      },
+      {
+        "name": "Oracle Certified Professional, Java SE 17",
+        "issuer": "Oracle",
+        "date": "2022-08"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Vietnamese",
+        "fluency": "Native"
+      },
+      {
+        "language": "English",
+        "fluency": "Fluent"
+      }
+    ]
   }
 }

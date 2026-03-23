@@ -44,6 +44,8 @@ const emptyResumeData: ResumeData = {
   education: [],
   skills: [],
   projects: [],
+  certifications: [],
+  languages: [],
 }
 
 const DashboardPage: React.FC = () => {
@@ -156,7 +158,7 @@ const DashboardPage: React.FC = () => {
         const resumeData = parsed.data ? (typeof parsed.data === 'string' ? parsed.data : JSON.stringify(parsed.data)) : text
         await resumeService.importJson({
           title: parsed.title || fileName || 'Imported Resume',
-          templateName: parsed.templateName || 'azurill',
+          templateName: parsed.templateName || 'cabernet',
           data: resumeData,
         })
         message.success('Resume imported!')
@@ -360,7 +362,7 @@ const DashboardPage: React.FC = () => {
         confirmLoading={creating}
         okText="Create"
       >
-        <Space orientation="vertical" size="middle" style={{ width: '100%' }}>
+        <Space direction="vertical" size="middle" style={{ width: '100%' }}>
           <div>
             <Text strong style={{ display: 'block', marginBottom: 8 }}>
               Resume Title
@@ -410,6 +412,11 @@ const DashboardPage: React.FC = () => {
                   { value: 'armagnac', label: 'Armagnac' },
                   { value: 'amarone', label: 'Amarone' },
                   { value: 'opus-one', label: 'Opus One' },
+                  { value: 'romanee', label: 'Romanee' },
+                  { value: 'cristal', label: 'Cristal' },
+                  { value: 'sassicaia', label: 'Sassicaia' },
+                  { value: 'krug', label: 'Krug' },
+                  { value: 'petrus', label: 'Petrus' },
                 ]},
               ]}
             />

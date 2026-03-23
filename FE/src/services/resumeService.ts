@@ -8,6 +8,9 @@ export interface ResumeBasics {
   summary: string
   location: string
   avatarUrl?: string
+  linkedin?: string
+  github?: string
+  website?: string
 }
 
 export interface WorkExperience {
@@ -40,12 +43,25 @@ export interface Project {
   highlights: string[]
 }
 
+export interface Certification {
+  name: string
+  issuer: string
+  date: string
+}
+
+export interface Language {
+  language: string
+  fluency: string
+}
+
 export interface ResumeData {
   basics: ResumeBasics
   work: WorkExperience[]
   education: Education[]
   skills: Skill[]
   projects: Project[]
+  certifications: Certification[]
+  languages: Language[]
 }
 
 export interface ResumeListItem {
